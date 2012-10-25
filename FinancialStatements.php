@@ -15,7 +15,8 @@ class FinancialStatements
      */
     public static function assets($liabilites, $StockEquity)
     {
-        return ($liabilites / $StockEquity);
+        $Assets = ($liabilites / $StockEquity);
+        return $Assets;
     }
     
     /**
@@ -27,7 +28,8 @@ class FinancialStatements
      */
     public static function earnings_per_share($NetIncome, $StockDiv, $CommonShare)
     {
-        return ($NetIncome - $StockDiv) - $CommonShare;
+        $EarningPerShare = ($NetIncome - $StockDiv) - $CommonShare;
+        return $EarningPerShare ;
     }
       
     /**
@@ -38,7 +40,8 @@ class FinancialStatements
      */
     public static function current_ratio($CurrentAssets, $CurrentLiabilities)
     {
-        return ($CurrentAssets / $CurrentLiabilities);
+        $CurrentRatio = ($CurrentAssets / $CurrentLiabilities);
+        return  $CurrentRatio;
     } 
      
     /**
@@ -49,7 +52,8 @@ class FinancialStatements
      */
     public static function debt_total_asset_ratio($TotalAssets, $TotalLiabilities)
     {
-        return ($TotalAssets / $TotalLiabilities);
+        $DebtTotalAssetRatio =  ($TotalAssets / $TotalLiabilities);
+        return  $DebtTotalAssetRatio ;
     }
     
     /**
@@ -61,7 +65,8 @@ class FinancialStatements
      */
     public static function free_cash_flow($CashProvided, $CashExpenditures, $CashDividends)
     {
-        return ($CashProvided - $CashExpenditures -$CashDividends);
+        $FreeCashFlow = ($CashProvided - $CashExpenditures -$CashDividends);
+        return $FreeCashFlow;
     }
 }
 

@@ -15,7 +15,8 @@ class CapitalInvestment
      */
    public static function payback_period($CostInvestment, $CashFlow)
    {
-       return ($CostInvestment / $CashFlow);
+       $CashPaybackPeriod = ($CostInvestment / $CashFlow);
+       return  $CashPaybackPeriod;
    }
    
    /**
@@ -26,7 +27,8 @@ class CapitalInvestment
      */
    public static function profitability_index($NetCashFlow, $InitalInvestment)
    {
-       return ($NetCashFlow / $InitalInvestment);
+       $ProfitabilityIndex = ($NetCashFlow / $InitalInvestment);
+       return $ProfitabilityIndex;
    }
    
    /**
@@ -37,7 +39,8 @@ class CapitalInvestment
      */
    public static function interest_rate_return($capitalInvestment, $NetCashFlow)
    {
-       return ($capitalInvestment / $NetCashFlow);
+       $InterestRateReturnFactor = ($capitalInvestment / $NetCashFlow);
+       return $InterestRateReturnFactor;
    }
    
     /**
@@ -48,7 +51,8 @@ class CapitalInvestment
      */
    public static function annual_return($NetIncome, $AverageInvestment)
    {
-       return ($NetIncome / $AverageInvestment);
+       $AnnualRateReturn = ($NetIncome / $AverageInvestment);
+       return $AnnualRateReturn;
    }
    
    /**
@@ -59,7 +63,8 @@ class CapitalInvestment
       */
    public static function average_investment($OrgInvestment, $EndValueLife)
    {
-       return ($OrgInvestment + $EndValueLife) /2;
+       $AverageInvestment = ($OrgInvestment + $EndValueLife) /2;
+       return  $AverageInvestment;
    }
 }
 

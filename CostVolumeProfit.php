@@ -16,7 +16,8 @@ class CostVolumeProfit
      */
     public static function variable_cost_per_unit($CostChange, $high, $low)
     {
-        return $CostChange / ($high - $low);    
+        $VariableCostPerUnit = $CostChange / ($high - $low);
+        return  $VariableCostPerUnit;    
     }
     
      /**
@@ -27,7 +28,8 @@ class CostVolumeProfit
      */
     public static function contribution_margin_per_unit($SellingPrice, $VariableCost)
     {
-        return ($SellingPrice - $VariableCost);
+        $ContributionMarginPerUnit = ($SellingPrice - $VariableCost);
+        return $ContributionMarginPerUnit;
     }
     
     /**
@@ -38,7 +40,8 @@ class CostVolumeProfit
      */
     public static function contribution_margin_ratio($ConMarginPerUnit, $SellingPrice)
     {
-        return ($ConMarginPerUnit / $SellingPrice);    
+        $ContributionMarginRatio =  ($ConMarginPerUnit / $SellingPrice);  
+        return $ContributionMarginRatio;    
     }
     
      /**
@@ -50,7 +53,8 @@ class CostVolumeProfit
      */
     public static function sales($VariableCost, $Fixedcost, $NetIncome)
     {
-        return ($VariableCost + $Fixedcost + $NetIncome);
+        $Sales = ($VariableCost + $Fixedcost + $NetIncome);
+        return   $Sales ;
     }
     
      /**
@@ -62,7 +66,8 @@ class CostVolumeProfit
      */
     public static function breakeven_points_units($Fixedcost, $ConMarginPerUnit)
     {
-        return ($Fixedcost / $ConMarginPerUnit);
+        $BreakEvenPoint = ($Fixedcost / $ConMarginPerUnit);
+        return  $BreakEvenPoint ;
     }
     
     /**
@@ -74,7 +79,8 @@ class CostVolumeProfit
      */
     public static function required_sales($VariableCost, $FixedCost, $TargetNetIncome)
     {
-        return ($VariableCost + $FixedCost + $TargetNetIncome);
+        $RequiredSales = ($VariableCost + $FixedCost + $TargetNetIncome);
+        return $RequiredSales;
     }
     
     /**
@@ -86,7 +92,8 @@ class CostVolumeProfit
      */
     public static function required_sales_units($FixedCost, $TargetNetIncome, $ConMarginUnits)
     {
-        return ($FixedCost + $TargetNetIncome) / $ConMarginUnits;
+        $RequiredSalesInUnits = ($FixedCost + $TargetNetIncome) / $ConMarginUnits;
+        return $RequiredSalesInUnits ;
     }
     
     /**
@@ -98,7 +105,8 @@ class CostVolumeProfit
      */
      public static function required_sales_dollars($FixedCost, $TargetNetIncome, $ConMarginRatio)
     {
-        return ($FixedCost + $TargetNetIncome) / $ConMarginRatio;
+        $RequiredSalesInDollars = ($FixedCost + $TargetNetIncome) / $ConMarginRatio;
+        return $RequiredSalesInDollars;
     }
      
     /**
@@ -109,7 +117,8 @@ class CostVolumeProfit
      */
      public static function margin_safety_ratio($MarginSafety, $Sales)
     {
-        return ($MarginSafety / $Sales);
+        $MarginSafetyInRatio = ($MarginSafety / $Sales);
+        return $MarginSafetyInRatio;
     }
     
     /**
@@ -120,7 +129,8 @@ class CostVolumeProfit
      */
     public static function margin_safety_dollars($BreakEven, $Sales)
     {
-        return ($Sales - $BreakEven);
+        $MarginSafetyInDollars = ($Sales - $BreakEven);
+        return $MarginSafetyInDollars;
     }
 }
 

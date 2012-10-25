@@ -15,7 +15,8 @@ class BudgetControl
      */
     public static function ROI($ControlMargin, $OperatingAssets)
     {
-        return $ControlMargin / $OperatingAssets;
+        $ROI = $ControlMargin / $OperatingAssets;
+        return $ROI;
         
     }
     
@@ -28,7 +29,8 @@ class BudgetControl
      */
     public static function residual_income($ControlMargin, $RateReturn, $OperatingAsset)
     {
-        return $ControlMargin - ($RateReturn * $OperatingAsset);
+        $ResidualIncome = $ControlMargin - ($RateReturn * $OperatingAsset);
+        return  $ResidualIncome;
         
     }
 }

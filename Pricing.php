@@ -15,7 +15,8 @@ class Pricing
      */
     public static function target_cost($MarketPrice, $DesiredPrice)
     {
-        return ($MarketPrice - $DesiredPrice);
+        $TargetCost = ($MarketPrice - $DesiredPrice);
+        return $TargetCost;
     }
     
      /**
@@ -26,7 +27,8 @@ class Pricing
      */
     public static function target_selling_price($Cost, $MarkupPercent)
     {
-        return $Cost - ($MarkupPercent * $Cost);
+        $TargetSellingPrice = $Cost - ($MarkupPercent * $Cost);
+        return $TargetSellingPrice;
     }
     
       /**
@@ -37,7 +39,8 @@ class Pricing
      */
     public static function mark_percentage($ROIunits, $UnitCost)
     {
-        return ($ROIunits / $UnitCost);
+        $MarkUpPercentage = ($ROIunits / $UnitCost);
+        return $MarkUpPercentage;
     }
 }
 

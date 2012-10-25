@@ -16,7 +16,8 @@ class BudgetPlanning
      */
     public static function required_production_units($SalesUnits, $EndingGood, $BegGoods)
     {
-        return ($SalesUnits - $EndingGood) - $BegGoods;
+        $RequiredProduction = ($SalesUnits - $EndingGood) - $BegGoods;
+        return $RequiredProduction;
         
     }
     
@@ -31,7 +32,8 @@ class BudgetPlanning
      */
     public static function required_direct_materials_purch($DirectMaterials, $EndingGoods, $BegGoods)
     {
-        return ($DirectMaterials + $EndingGoods) - $BegGoods;
+        $RequiredDirectMaterialsPurchased = ($DirectMaterials + $EndingGoods) - $BegGoods;
+        return  $RequiredDirectMaterialsPurchased;
         
     }
     
@@ -44,7 +46,8 @@ class BudgetPlanning
      */
     public static function required_merchandis_purchased($GoodsCost, $EndingInventory, $BegInventory)
     {
-        return ($GoodsCost + $EndingInventory) - $BegInventory;
+        $RequiredMerchandisePurchased = ($GoodsCost + $EndingInventory) - $BegInventory;
+        return $RequiredMerchandisePurchased;
         
     }
     
@@ -57,7 +60,8 @@ class BudgetPlanning
      */
     public static function total_direct_labor_cost($UnitsProduced, $UnitTime, $LaborCost)
     {
-        return ($UnitsProduced * $UnitTime * $LaborCost);
+        $TotalDirectLaborCost = ($UnitsProduced * $UnitTime * $LaborCost);
+        return $TotalDirectLaborCost;
         
     }
 }
